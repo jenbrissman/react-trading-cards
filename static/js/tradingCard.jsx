@@ -12,7 +12,7 @@ function TradingCard(props) {
     <div className="card">
       <h2>Name: {props.name}</h2>
       <img src={props.imgUrl} />
-      <h2>Skill: </h2>
+      <h2>Skill: {props.skill}</h2>
     </div>
   );
 }
@@ -39,6 +39,8 @@ ReactDOM.render(
   document.querySelector('#float')
 );
 
+
+
 ReactDOM.render(
   (
     <TradingCard
@@ -48,4 +50,28 @@ ReactDOM.render(
     />
   ),
   document.querySelector('#llambda')
+);
+
+
+ReactDOM.render(
+  (
+    <TradingCard
+      name="Ilana"
+      skill="mothering plants"
+      imgUrl="/static/img/off-by-one.jpg"
+    />
+  ),
+  document.querySelector('#ilana')
+);
+
+
+ReactDOM.render(
+  (
+    <TradingCard
+      name="Jen"
+      skill="singing tunes"
+      imgUrl="/static/img/seedpy.jpg"
+    />
+  ),
+  document.querySelector('#jen')
 );
